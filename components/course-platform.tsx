@@ -71,10 +71,10 @@ export function CoursePlatform() {
               {
                 search === '' ?
                   courses.map((course, id) => (
-                    <CourseEmbed key={id} title={course.title} description={course.description} shortDescription={course.shortDescription} imgURL={course.imgURL} courseURL={course.courseURL} id={id.toString()} courseCategory={course.courseCategory} courseDuration={course.courseDuration} />
+                    <CourseEmbed key={id} title={course.title} shortDescription={course.shortDescription} imgURL={course.imgURL} id={id.toString()} courseCategory={course.courseCategory} courseDuration={course.courseDuration} />
                   )) :
                   courses.filter((course) => course.title.toLowerCase().includes(search.toLowerCase())).map((course, id) => (
-                    <CourseEmbed key={id} title={course.title} description={course.description} shortDescription={course.shortDescription} imgURL={course.imgURL} courseURL={course.courseURL} id={id.toString()} courseCategory={course.courseCategory} courseDuration={course.courseDuration} />
+                    <CourseEmbed key={id} title={course.title} shortDescription={course.shortDescription} imgURL={course.imgURL} id={id.toString()} courseCategory={course.courseCategory} courseDuration={course.courseDuration} />
                   ))
               }
             </div>

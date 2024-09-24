@@ -94,7 +94,7 @@ export function CoursePageComponent() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>What You'll Get</CardTitle>
+                  <CardTitle>What You Will Get</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">

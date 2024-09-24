@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
-const CourseEmbed = ({ title, shortDescription, description, imgURL, courseURL, id, courseCategory, courseDuration }: { title: string, shortDescription: string, description: string, imgURL: string, courseURL: string, id: string, courseCategory: string, courseDuration: string }) => {
+const CourseEmbed = ({ title, shortDescription, imgURL, id, courseCategory, courseDuration }: { title: string, shortDescription: string, imgURL: string, id: string, courseCategory: string, courseDuration: string }) => {
   return (
     <Card>
       <CardHeader>
