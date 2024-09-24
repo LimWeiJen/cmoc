@@ -31,7 +31,10 @@ export function CoursePageComponent() {
             <BookOpen className="h-6 w-6" />
             <span className="ml-2 text-lg font-bold">M<span className="text-[#00ADB5]">C</span>O<span className="text-[#00ADB5]">C</span></span>
           </Link>
-          <Button>Enroll Now</Button>
+          <div className="flex gap-2">
+            <Button onClick={() => window.open(course.preview, "_blank")}>Watch Free Preview</Button>
+            <Button onClick={() => window.open(course.courseURL, "_blank")} className="bg-[#00ADB5] text-white">Enroll Now</Button>
+          </div>
         </div>
       </header>
       <main className="flex-1">
@@ -106,7 +109,8 @@ export function CoursePageComponent() {
                   </ul>
                 </CardContent>
               </Card>
-              <Button className="w-full text-lg py-6">Enroll Now for {course.price}</Button>
+              <Button onClick={() => window.open(course.preview, "_blank")} className="w-full text-lg py-6">Watch Free Preview</Button>
+              <Button onClick={() => window.open(course.courseURL, "_blank")} className="w-full text-lg py-6 bg-[#00ADB5] text-white">Enroll Now for {course.price}</Button>
             </div>
           </div>
         </div>
