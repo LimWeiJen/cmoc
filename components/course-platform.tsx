@@ -6,6 +6,7 @@ import { BookOpen, Search } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import CourseEmbed from "./course-embed"
+import { CourseSkeleton } from "./course-skeleton"
 
 export function CoursePlatform() {
   const [courses, setcourses] = useState<Array<any>>([]);
@@ -49,7 +50,7 @@ export function CoursePlatform() {
                   Matriculation <span className="text-[#00ADB5]">College</span> Online <span className="text-[#00ADB5]">Courses</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                  Explore <span className="font-bold text-[#00ADB5]">free</span> and paid online courses aligned with Malaysia Matriculation College Syllabus
+                  Explore <span className="font-bold text-[#00ADB5]">free</span> and paid <span className="font-bold text-[#00ADB5]">high quality</span> online courses aligned with Malaysia Matriculation College Syllabus
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
@@ -68,7 +69,7 @@ export function CoursePlatform() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">All Courses</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {
+              {courses.length === 0 ? <CourseSkeleton /> :
                 search === '' ?
                   courses.map((course, id) => (
                     <CourseEmbed key={id} title={course.title} shortDescription={course.shortDescription} imgURL={course.imgURL} id={id.toString()} courseCategory={course.courseCategory} courseDuration={course.courseDuration} />

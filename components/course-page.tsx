@@ -8,10 +8,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
+import { CourseSkeleton } from "./course-skeleton"
 
 export function CoursePageComponent() {
   const { id } = useParams();
-  const [course, setcourse] = useState<any>({});
+  const [course, setcourse] = useState<any>();
 
   useEffect(() => {
     ; (
@@ -22,6 +23,8 @@ export function CoursePageComponent() {
       }
     )()
   }, []);
+
+  if (!course) return <CourseSkeleton />
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
