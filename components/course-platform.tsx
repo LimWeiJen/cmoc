@@ -49,7 +49,7 @@ export function CoursePlatform() {
                   Matriculation <span className="text-[#00ADB5]">College</span> Online <span className="text-[#00ADB5]">Courses</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                  Explore <span className="font-bold text-[#00ADB5]">free</span> and paid online courses aligned with Malaysia's Matriculation College Syllabus
+                  Explore <span className="font-bold text-[#00ADB5]">free</span> and paid online courses aligned with Malaysia Matriculation College Syllabus
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
